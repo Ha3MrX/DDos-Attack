@@ -5,7 +5,7 @@
 by overwhelming it with traffic from multiple sources. They target a wide variety of important resources
 from banks to news websites, and present a major challenge to making sure people can publish and access important information
 
-### Dwonload&Install
+## Dwonload&Install
 
 git clone https://github.com/Ha3MrX/DDos-Attack
 ```

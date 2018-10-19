@@ -18,7 +18,7 @@ bytes = random._urandom(1490)
 #############
 
 os.system("test&cls")
-os.system("figlet DDos Attack")
+os.system("echo figlet DDos Attack")
 print
 print "Author   : HA-MRX"
 print "You Tube : https://www.youtube.com/c/HA-MRX"
@@ -29,7 +29,7 @@ ip = raw_input("IP Target : ")
 port = input("Port       : ")
 
 os.system("test&cls")
-os.system("figlet Attack Starting")
+os.system("echo figlet Attack Starting")
 print "[                    ] 0% "
 time.sleep(5)
 print "[=====               ] 25%"

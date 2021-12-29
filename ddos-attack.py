@@ -18,13 +18,13 @@ bytes = random._urandom(1490)
 #############
 
 os.system("clear")
-os.system("figlet POLAR BOTNET")
+os.system("figlet Death-Note Ddos")
 print
 print "Author   : D4rkD3m0n1c"
 print "You Tube : https://www.youtube.com/c/D4RKD3M0N1C"
 print "github   : https://github.com/D4RKD3M0N1C"
 print
-ip = raw_input("IP Target : ")
+ip = raw_input("site : ")
 port = input("Port       : ")
 
 os.system("clear")

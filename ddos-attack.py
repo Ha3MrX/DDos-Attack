@@ -18,7 +18,7 @@ bytes = random._urandom(1490)
 #############
 
 os.system("clear")
-os.system("figlet Death-Note Ddos")
+Print "Death Note DDos: by Tishiron
 print
 print "Author   : D4rkD3m0n1c"
 print "You Tube : https://www.youtube.com/c/D4RKD3M0N1C"

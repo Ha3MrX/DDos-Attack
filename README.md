@@ -21,7 +21,7 @@ from banks to news websites, and present a major challenge to making sure people
 
 ### YouTube channel
 
-https://www.youtube.com/c/HA-MRX
+https://www.youtube.com/channel/UCCgy7i_A5yhAEdY86rPOinA
 
 ### Video Tutorial
 

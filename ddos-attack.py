@@ -19,7 +19,7 @@ bytes = random._urandom(1490)
 
 os.system("clear")
 os.system("figlet DDos Attack")
-print
+print "special thanks : Anas Khan"
 print "Author   : HA-MRX"
 print "You Tube : https://www.youtube.com/channel/UCCgy7i_A5yhAEdY86rPOinA"
 print "github   : https://github.com/Ha3MrX"

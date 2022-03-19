@@ -42,7 +42,7 @@ print("[====================] 100%")
 time.sleep(3)
 sent = 0
 while True:
-     sock.sendto(bytes, (ip,port))
+     sock.sendto(bytes, (ip,int(port)))
      sent = sent + 1
      port = port + 1
      print(f"Sent {sent} packet to {ip} throught port: {port}")

@@ -13,7 +13,7 @@ from banks to news websites, and present a major challenge to making sure people
 
 ### chmod +x ddos-attack.py
 
-### python ddos-attack.py
+### python2 ddos-attack.py
 
 ### ScreenShot 
 

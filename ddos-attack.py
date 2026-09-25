@@ -44,10 +44,13 @@ while True:
     try:
         sock.sendto(bytes, (ip, port))
         sent = sent + 1
-        port = port + 1
         print(f"Sent {sent} packet to {ip} through port:{port}")
-        if port == 65534:
+        
+        # Increment and safely wrap around before exceeding max port range
+        port = port + 1
+        if port > 65535:
             port = 1
+            
     except KeyboardInterrupt:
         print("\n[!] Stopped by user")
         sys.exit()
